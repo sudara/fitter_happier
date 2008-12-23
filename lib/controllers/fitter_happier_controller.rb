@@ -1,6 +1,7 @@
 class FitterHappierController < ActionController::Base
   session :off
   layout nil
+  skip_filter filter_chain # Disable any filters that might be set in Application Controller
   
   def index
     render(:text => "FitterHappier Site Check Passed\n")
